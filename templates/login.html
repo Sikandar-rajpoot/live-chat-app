@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Live Chat</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-box">
+        <div class="auth-tabs">
+          <button class="auth-tab" onclick="switchTab('login')">Login</button>
+          <button class="auth-tab" onclick="switchTab('register')">
+            Register
+          </button>
+        </div>
+
+        <div id="login-form" class="auth-form active">
+          <h2>Welcome Back!</h2>
+          <form id="login-form-element" onsubmit="return handleLogin(event)">
+            <div class="form-group">
+              <input
+                type="text"
+                id="login-username"
+                required
+                pattern="[a-zA-Z0-9_]{3,20}"
+                title="3-20 characters, letters, numbers and underscore only"
+              />
+              <label>Username</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="login-password"
+                required
+                minlength="6"
+              />
+              <label>Password</label>
+            </div>
+            <button type="submit" class="auth-button">Login</button>
+          </form>
+        </div>
+
+        <div id="register-form" class="auth-form">
+          <h2>Create Account</h2>
+          <form
+            id="register-form-element"
+            onsubmit="return handleRegister(event)"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                id="reg-username"
+                required
+                pattern="[a-zA-Z0-9_]{3,20}"
+                title="3-20 characters, letters, numbers and underscore only"
+              />
+              <label>Username</label>
+            </div>
+            <div class="form-group">
+              <input type="password" id="reg-password" required minlength="6" />
+              <label>Password</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="reg-confirm-password"
+                required
+                minlength="6"
+              />
+              <label>Confirm Password</label>
+            </div>
+            <button type="submit" class="auth-button">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/static/auth.js"></script>
+  </body>
+</html>

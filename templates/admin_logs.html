@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Log Viewer</title>
+    <script defer src="/static/admin_logs.js"></script>
+  </head>
+  <body>
+    <h2>📜 Admin Log Viewer</h2>
+    <label for="user-select">Select User:</label>
+    <select id="user-select">
+      <option value="">Loading...</option>
+    </select>
+    <button id="download-logs">Download Logs</button>
+    <div
+      id="logs-container"
+      style="
+        white-space: pre-wrap;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+      "
+    >
+      Select a user to view logs.
+    </div>
+  </body>
+</html>

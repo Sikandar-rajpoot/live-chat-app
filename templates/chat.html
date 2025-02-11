@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chat-header">
+        <h2>Live Chat</h2>
+        <div class="header-buttons">
+          <button
+            id="clear-history"
+            class="clear-btn"
+            onclick="clearMessageHistory()"
+          >
+            Clear History
+          </button>
+          <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+      </div>
+      <div id="chat-box" class="chat-box"></div>
+      <div class="message-input-container">
+        <button id="emoji-button" class="emoji-btn">😊</button>
+        <input type="text" id="message" placeholder="Type a message" />
+        <button id="send-btn" class="send-btn">Send</button>
+      </div>
+      <emoji-picker id="emoji-picker" class="emoji-picker"></emoji-picker>
+    </div>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
