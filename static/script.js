@@ -234,7 +234,7 @@ const styles = `
 }
 
 .typing-user {
-    color: #4CAF50;
+    color:rgb(5, 126, 9);
     font-weight: 500;
 }
 
